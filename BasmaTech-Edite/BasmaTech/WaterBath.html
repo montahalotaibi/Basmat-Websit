@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BASMATech</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<style>*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+h2{
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* color: white; */
+  padding: 30px 0;
+}
+/* Table Styles */
+.table-wrapper{
+  margin: 10px 70px 70px;
+  box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+.fl-table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+.fl-table td, .fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+.fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+.fl-table thead th {
+  color: #ffffff;
+  background: #1d9eb5;
+}
+
+.fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background:#1d9eb5;
+}
+.fl-table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+/* Responsive */
+@media (max-width: 767px) {
+  .fl-table {
+      display: block;
+      width: 100%;
+  }
+  .table-wrapper:before{
+      content: "Scroll horizontally >";
+      display: block;
+      text-align: right;
+      font-size: 11px;
+      color: white;
+      padding: 0 0 10px;
+  }
+  .fl-table thead, .fl-table tbody, .fl-table thead th {
+      display: block;
+  }
+  .fl-table thead th:last-child{
+      border-bottom: none;
+  }
+  .fl-table thead {
+      float: left;
+  }
+  .fl-table tbody {
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+  }
+  .fl-table td, .fl-table th {
+      padding: 20px .625em .625em .625em;
+      height: 60px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 120px;
+      font-size: 13px;
+      text-overflow: ellipsis;
+  }
+  .fl-table thead th {
+      text-align: left;
+      border-bottom: 1px solid #f7f7f9;
+  }
+  .fl-table tbody tr {
+      display: table-cell;
+  }
+  .fl-table tbody tr:nth-child(odd) {
+      background: none;
+  }
+  .fl-table tr:nth-child(even) {
+      background: transparent;
+  }
+  .fl-table tr td:nth-child(odd) {
+      background: #F8F8F8;
+      border-right: 1px solid #E6E4E4;
+  }
+  .fl-table tr td:nth-child(even) {
+      border-right: 1px solid #E6E4E4;
+  }
+  .fl-table tbody td {
+      display: block;
+      text-align: center;
+  }
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+}
+dialog {
+  width: 100%;
+  max-width: 591px;
+  border: 0;
+  padding: 0;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+}
+#dialog-wrap {
+  padding: 65px 25px 45px;
+}
+#close-dialog,
+#close-generated-dialog {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 2;
+  cursor: pointer;
+  border: 0;
+  background: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg height='512px' id='Layer_1' style='enable-background:new 0 0 512 512;' version='1.1' viewBox='0 0 512 512' width='512px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4 L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1 c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1 c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z'/%3E%3C/svg%3E") center no-repeat;
+  background-size: contain;
+  padding: 0;
+  font-size: 0;
+}
+
+
+.flex {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.col {
+  width: 33.33333%;
+  text-align: center;
+}
+
+</style>
+<body>
+
+ <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <img src="assets/img/logo.jpg" alt="BASMATech"> 
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+		  <li><a class="nav-link scrollto" href="index.html">HOME</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#goals">Goals</a></li>
+          <li><a class="nav-link scrollto" href="index.html#values">Values</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a href="equipements.html" class="active">Laboratory Equipement</a></li>
+          <li><a class="nav-link scrollto" href="index.html#HMS">SHMS</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+       
+       	  <li class="dropdown"><a href="#"><span><img src="assets/img/flags/Flag_of_the_United_Kingdom.svg" width="20" alt=""> English</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="Ar/WaterBath.html"><img src="assets/img/flags/Flag_of_the_Arab_League.svg" width="20" alt=""> Arabic</a></li>
+             
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+
+      <div>
+      
+     
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Water Bath</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="equipements.html">Laboratory Equipement</a></li>
+            <li>Water Bath</li>
+          </ol>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+          <div class="col-lg-12">
+
+            <article class="blog-details">
+
+              <div class="post-img">
+                <img src="assets/img/blog/WaterBath.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">Water Bath</h2>
+
+       
+
+              <div class="content">
+                <h3>BWB S-Digital 10</h3>
+
+                <p>
+                  A Water bath is essential laboratory equipment. It is used to heat samples in water at a desired temperature for a long time. A water bath is used to warm reagents, melt substrates, and enable certain chemical reactions at high temperatures. 
+                </p>
+
+
+                <p>
+                  The BWB S-Digital 10 water bath version can be used in schools, laboratories, and factories through its advanced features.
+				</p>
+
+                <p>
+                  The BWB S-Digital 10 is built of stainless steel and controlled with precise electronics to ensure the highest level of safety in the laboratory.
+                </p>
+                
+                
+<div class="rotate">
+  <button id="show-dialog">FEATURES +
+  </button>
+<dialog id="dialog">
+<div style="width: 590;"id="dialog-wrap">
+<div class="center">
+<h2>FEATURES
+</h2>
+<p style="margin-inline:94px;">A Water bath is essential laboratory equipment.</p>
+</div><div  style="width: 440px;"class="table-wrapper">
+<table class="fl-table">
+<!-- <h3>Features</h3> -->
+
+<thead>
+<tr>
+<th>BWB S-Digital 10</th>
+<!-- <th>Header 2</th> -->
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temperature Stability           &nbsp;&nbsp;&nbsp;    &nbsp;- 0.1 ºC</td>
+
+
+</tr>
+<tr>
+<td>Temperature Range Ambient &nbsp;&nbsp;&nbsp; + 5ºC to + 80ºC</td>
+
+</tr>
+<tr>
+
+
+</tr>
+<tr>
+<td>Tank Capacity   &nbsp;&nbsp;&nbsp;10 L</td>
+
+</tr>
+<tr>
+<td>Bath Tank Dimensions (cm) &nbsp;&nbsp;&nbsp;21.5 x 34 x 19</td>
+
+
+</tr>
+<tr>
+<td>Exterior Dimensions  &nbsp;&nbsp;&nbsp;59 x 31 x 23</td>
+
+
+</tr>
+<tr>
+<td>Heater Power  &nbsp;&nbsp;&nbsp;00 W</td>
+
+
+</tr>
+<tr>
+<td>Pump Power   &nbsp;&nbsp;&nbsp;30W</td>
+
+</tr>
+<tr>
+<td>Electrical Supply   &nbsp;&nbsp;&nbsp;230V, 50/60 Hz</td>
+
+
+</tr>
+<tr>
+<td>Electrical load  &nbsp;&nbsp;&nbsp;Approx. 1000 W (during heating)</td>
+
+
+</tr>
+<tbody>
+</table>
+
+</div>
+<button id="close-dialog">Close Dialog</button>
+</div>
+</dialog>
+
+</div>
+
+</div> 
+
+</main>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+
+    <div class="footer-legal text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>BASMAT 2023</span></strong>. All Rights Reserved
+          </div>
+          
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="https://twitter.com/TechBasma" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100092442593452&mibextid=ZbWKwL" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+          <!--a href="#" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="google-plus" target="_blank"><i class="bi bi-skype"></i></a-->
+          <a href="https://www.linkedin.com/in/basma-tech-23594a276/" class="linkedin"target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>const showDialog = document.getElementById('show-dialog');
+    const dialog = document.getElementById('dialog');
+    const hideDialog = document.getElementById('close-dialog');
+    
+    showDialog.addEventListener('click', () => {
+      dialog.showModal();
+    });
+    
+    hideDialog.addEventListener('click', () => {
+      dialog.close();
+    });
+    
+    dialog.addEventListener('click', ( e ) => {
+      if ( e.target.tagName === 'DIALOG' ) {
+        dialog.close();
+      }
+    });</script>
+</body>
+
+</html>

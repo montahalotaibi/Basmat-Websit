@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BASMATech</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/browser.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+
+
+/* Google Fonts - Poppins */
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/browser.css');
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+    
+  }
+  .slide-container {
+    margin: 0 30px;
+    overflow: hidden;
+  }
+  .card {
+    background: #fff;
+    border-radius: 8px;
+  }
+  .card .image-box {
+    height: 200px;
+  }
+  .card .image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  .card .profile-details {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 15px;
+  }
+  .card .profile-details img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  .profile-details .name {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .profile-details .job {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4d4d4d;
+  }
+  
+  .swiper-navBtn {
+    color: #000;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after {
+    font-size: 18px;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #000;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .swiper-navBtn {
+      display: none;
+    }
+  }</style>
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <img src="assets/img/logo.jpg" alt="BASMATech"> 
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+		  <li><a class="nav-link scrollto" href="index.html">HOME</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#goals">Goals</a></li>
+          <li><a class="nav-link scrollto" href="index.html#values">Values</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a href="equipements.html"> </a></li>
+          <li><a class="nav-link scrollto active" href="index.html#HMS" ></a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+       
+       	  <li class="dropdown"><a href="#"><span><img src="assets/img/flags/Flag_of_the_United_Kingdom.svg" width="20" alt=""> English</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="Ar/HMS.html"><img src="assets/img/flags/Flag_of_the_Arab_League.svg" width="20" alt=""> Arabic</a></li>
+             
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+
+      <div>
+      
+     
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Smart Health Management System</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>SHMS</li>
+          </ol>
+        </div>
+
+      </div> 
+    <!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+          <div class="col-lg-12">
+
+            <article  style="margin-top: -95px;"class="blog-details">
+
+              <div  style="margin-top: 151px;"class="post-img">
+                <img src="assets/img/smart1.jpg" alt="" class="img-fluid">
+                <!-- <img src="assets/img/brochure_basmatech_vec.jpg" alt="" class="img-fluid"> -->
+
+                <!-- <img src="img/smart1.jpg"> -->
+              </div>
+
+              <h2 class="title">Smart Health Management System</h2>
+              
+             <div class="content">
+             <p>The Smart Health Management System (SHMS) is a comprehensive Hospital Management System designed to streamline and automate hospital operations. SHMS proposes an innovative system based on the Internet of Things and Artificial Intelligence.</p>
+             <p>The system includes essential elements such as patient registration, physician management, appointment management, IPD/hospitalization management, laboratory and diagnostics management, radiology management, patient billing, management dashboard, stock management, hospital finance management, pharmacy management, blood bank management, website features, extra features, specialty-specific modules, and department-based record sharing.</p>
+             <p>SHMS also provides advanced features like SMS and WhatsApp notifications, video consultation, electronic consent form management, patient subscriptions, patient appointment rating and survey, and patient body chart. With SHMS, hospitals and Health care centers can automate their processes, improve efficiency, and enhance patient care.</p>
+                                 <!-- <i class="fa-solid fa-user-nurse-hair" style="color: #4bbbc3;"></i>
+                                 <i class='fas fa-user-md' style='font-size:36px'></i> -->
+
+
+           
+             </div>
+
+             
+            </article><!-- End blog post -->
+            <div class="container swiper">
+              <div class="slide-container">
+                <div class="card-wrapper swiper-wrapper">
+                  <div class="card swiper-slide">
+                     <img src="assets/img/AI.jpg"> 
+                    <div    style="height: 212px;"class="profile-details">
+                      <div style="margin-top: -42px"class="name-job">
+                        <p style="margin-top: -22px;">Management dashboard
+                        </p>
+                        <a href="PatientBilling.html">  <button  style="margin-inline:34px; margin-top: 1px; "id="myBtn">Read More..</button>  </a>      
+                      </div>
+                    </div>
+                    <img src="imag/it.png" alt="" />
+
+                  </div>
+              <div>
+                <div id="myModal" class="modal">
+                </div>
+              </div>
+                  
+                  <div class="card swiper-slide">
+                    <img style="height: 168px;" src="assets/img/pat.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;    margin-inline: 21px;
+                      "> Patient management </p>
+                        <a href="patient.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+                      </div>
+                    </div>
+                  </div> 
+                   <div class="card swiper-slide">
+                    <img style="height: 165px;" src="assets/img/Radiology.jpg"> 
+                    <div style="height: 214px;" class="profile-details">
+                      <div class="name-job">
+                        <p style="margin-top:-62px;">Radiology Managemenr</p>
+                        <a href="r.html">  <button style="margin-top: -6px;margin-inline: 28px;" id="myBtn">Read More..</button>  </a>      
+
+                      </div>
+                    </div>
+                  </div> 
+                   <div class="card swiper-slide">
+                    <img style="height: 166px;"src="assets/img/Smart_healthph.jpg"> 
+                    <div style="height:213px ;"class="profile-details">
+                      <div style="margin-top: -44px;"class="name-job">
+                        <p style="margin-top: -11px">Pharmacy Management</p>
+                        <h4 class="job"></h4>
+                        <a href="Pharmacy.html">   <button style="margin-top:-60px;margin-inline: 33px;
+                        "id="myBtn">Read More..</button>    </a>    
+
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="card swiper-slide">
+                    <img src="assets/img/Healthcare-Tech.jpg"> 
+                    <div style="height:216px ;"class="profile-details">
+                      <div class="name-job">
+                        <p  style="margin-top: -50px;margin-inline:-8px;">Hospitalization Management</p>
+                        <h4 class="job"></h4>
+                        <a href="Hospitalization.html">  <button  style="margin-top: -10px;margin-inline: 29px;
+                        "id="myBtn">Read More..</button>        </a>
+
+                      </div>
+                    </div>
+                  </div> 
+                  
+                  <div class="card swiper-slide">
+                    <img style="    height: 163px;
+                  " src="assets/img/Physicians1.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;"> Physicians Management </p>
+                        <a href="physiciians.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img style="height: 164px;" src="assets/img/solution-lab_management-hero(1)-1280x720_tcm83-17912.jpg"> 
+
+                    <div  style="height: 214px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;"> Laboratory management </p>
+                        <a href="Laboratory.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img src="assets/img/Specialty-specific.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;"> Specialty-specific Modules</p>
+                        <a href="Specialty.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img src="assets/img/f150457bec74b8db7de4c29c49c8ccc8.jpg"> 
+                    <div  style="height: 212px;"class="profile-details">
+                      <div style="margin-top: 31px;" class="name-job">
+                        <p style="margin-top: -85px;margin-inline: 32px;
+                      "> Website Features  </p>
+                        <a href="Website.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img src="assets/img/blood.jpg"> 
+                    <div  style="height: 212px;"class="profile-details">
+                      <div style="margin-top: 31px;" class="name-job">
+                        <p style="margin-top: -85px;"> Blood bank management </p>
+                        <a href="blood.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img src="assets/img/fin.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;"> Finace management </p>
+                        <a href="Finace.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img  style="height: 167px;"src="assets/img/imgnew.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;"> Inventory management </p>
+                        <a href="Innovative.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img  style="height: 166px;"src="assets/img/app.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;"> Appointment Managemen</p>
+                        <a href="Appointment.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img src="assets/img/image.jpeg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;">Extra Features Modules</p>
+                        <a href="Extra.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next swiper-navBtn"></div>
+              <div class="swiper-button-prev swiper-navBtn"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+           
+          </div>
+
+        
+        </div>
+
+      </div>
+    </section>>
+    
+  </main>
+
+
+  <!-- <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+<script>var swiper = new Swiper(".slide-container", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  sliderPerGroup: 4,
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1000: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+
+
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 5000,
+    },
+    // init: false,
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.next-btn',
+      prevEl: '.prev-btn',
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+  
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+  
+      // 1440:{
+      //   slidesPerView: 5,
+      //   spaceBetween: 10,
+      // },
+  
+    }
+  });</script>
+  
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    
+</script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+ <!-- ======= Footer ======= -->
+ 
+</body>
+
+</html>

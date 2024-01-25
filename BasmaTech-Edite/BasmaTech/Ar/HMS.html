@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>بصمات التقنية</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/_utilities.scss" rel="h">
+
+</head>
+<style>/* Google Fonts - Poppins */
+  @import url('https://unpkg.com/css.gg@2.0.0/icons/css/browser.css');
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+   
+    .container {
+      max-width: 1120px;
+      width: 100%;
+      padding: 40px 0;
+    }
+    .slide-container {
+      margin: 0 30px;
+      overflow: hidden;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+    }
+    .card .image-box {
+      height: 200px;
+    }
+    .card .image-box img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+    .card .profile-details {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      padding: 15px;
+    }
+    .card .profile-details img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+    .profile-details .name {
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .profile-details .job {
+      font-size: 12px;
+      font-weight: 500;
+      color: #4d4d4d;
+    }
+    
+    .swiper-navBtn {
+      color: #000;
+      height: 40px;
+      width: 40px;
+      background: #fff;
+      border-radius: 50%;
+    }
+    .swiper-navBtn::before,
+    .swiper-navBtn::after {
+      font-size: 18px;
+    }
+    
+    .swiper-pagination-bullet {
+      background-color: #000;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .swiper-navBtn {
+        display: none;
+      }
+    }
+    
+    
+    button {
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(30deg, #878797, #4ce3f7);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+}
+    </style>
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+       
+
+      <nav id="navbar" class="navbar">
+        <ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+        <ul>
+		  <li><a class="nav-link scrollto" href="index.html" >الرئيسية</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">الرؤية</a></li>
+          <li><a class="nav-link scrollto" href="index.html#goals">الأهداف</a></li>
+          <li><a class="nav-link scrollto" href="index.html#values">القيم</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">الخدمات</a></li>
+          <li><a href="equipements.html">  </a></li>
+          <li><a class="nav-link scrollto active" href="index.html#HMS"  >   </a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">تواصل معنا</a></li>
+           <li class="dropdown"><a href="#"><span><img src="assets/img/flags/Flag_of_the_Arab_League.svg" width="20" alt=""> العربية</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="../HMS.html"><img src="assets/img/flags/Flag_of_the_United_Kingdom.svg" width="20" alt=""> English</a></li>
+             
+            </ul>
+          </li>
+       
+        </ul>
+      </nav><!-- .navbar -->
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto">
+        <img src="assets/img/logo.jpg" alt="BASMATech"> 
+      </a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li>إدارة الأنظمة الصحية الذكية</li>
+            <li><a href="index.html">الرئيسية</a></li>
+          </ol>
+          <h2>إدارة الأنظمة الصحية الذكية</h2>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog" >
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+          <div class="col-lg-12">
+
+            <article class="blog-details">
+
+              <div class="post-img">
+                 <img  src="assets/img/smart2.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">إدارة الأنظمة الصحية الذكية</h2>
+
+       
+			<div class="content">
+             <p>
+             إدارة الأنظمة الصحية الذكية هو نظام شامل لإدارة المستشفيات مصمم لتبسيط وأتمتة عمليات المستشفى. يعد نظامًا مبتكرًا يعتمد على إنترنت الأشياء والذكاء الاصطناعي
+             </p>
+             <p>
+             . يشتمل النظام على عناصر أساسية مثل تسجيل المرضى ، وإدارة شؤون الأطباء ،
+وإدارة المواعيد ، وإدارة المرضى المنومين بالمستشفى ، وإدارة المختبرات والتشخيص
+، وإدارة الفحوصات الشعاعية ، وفواتير المرضى ، ولوحة القيادة الإدارية ، وإدارة
+المخزون ، وإدارة تمويل المستشفيات ، وإدارة الصيدلية ، وإدارة بنك الدم ، وميزات
+موقع الويب ، والميزات الإضافية ، ووحدات التخصص
+             </p>
+             <p>
+             يوفر النظام الذكي أيضًا ميزات متقدمة مثل إشعارات الرسائل القصيرة و الواتساب ، والاستشارات بالفيديو، وإدارة نموذج الموافقة الإلكترونية ، واشتراكات المرضى ، وتقييم مواعيد المريض والاستقصاء ، ومخطط جسم المريض
+             </p>
+             <p>
+             يسمح النظام للمستشفيات ومراكز الرعاية الصحية بأتمتة عملياتها وتحسين الكفاءة وتعزيز رعاية المرضى
+             </p>
+           
+             </div>
+              
+
+
+			
+             
+            </article><!-- End blog post -->
+
+            <div class="container swiper">
+              <div class="slide-container">
+                <div class="card-wrapper swiper-wrapper">
+                  <div class="card swiper-slide">
+                     <img src="assets/img/AI.jpg"> 
+                    <div    style="height: 212px;"class="profile-details">
+                      <div style="margin-top: 31x;"class="name-job">
+                        <p style="margin-top: -52px;margin-inline: 52px;">لوحة المعلومات 
+                        </p><br>
+                        <a href="PatientBilling.html">  <button  style="margin-inline:34px; margin-top: -23px; "id="myBtn"> ..عرض المزيد</button>  </a>      
+                      </div>
+                    </div>
+                    <img src="imag/it.png" alt="" />
+
+                  </div>
+              <div>
+                <div id="myModal" class="modal">
+                </div>
+              </div>
+                  
+                  <div class="card swiper-slide">
+                    <img style="height: 168px;" src="assets/img/pat.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;margin-inline: 43px;"> ادارة شؤون المرضى   </p><br>
+                        <a href="patient.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn"> ..عرض المزيد</button>  </a>      
+                        <h4 class="job"></h4>
+                      </div>
+                    </div>
+                  </div> 
+                   <div class="card swiper-slide">
+                    <img style="height: 165px;" src="assets/img/Radiology.jpg"> 
+                    <div style="height: 214px;" class="profile-details">
+                      <div class="name-job">
+                        <p style="margin-top:-62px;margin-inline: 36px;">ادارة الفحوصات الشعاعية</p><br>
+                        <a href="r.html">  <button style="margin-top: -6px;margin-inline: 40px;
+                        " id="myBtn"> ..عرض المزيد</button>  </a>      
+
+                      </div>
+                    </div>
+                  </div> 
+                   <div class="card swiper-slide">
+                    <img style="height: 166px;"src="assets/img/Smart_healthph.jpg"> 
+                    <div style="height:213px ;"class="profile-details">
+                      <div style="margin-top: -44px;"class="name-job">
+                        <p style="margin-top: -11px;margin-inline: 71px;"> ادارة الصيدلية</p><br>
+                        <h4 class="job"></h4>
+                        <a href="Pharmacy.html">   <button style="margin-top:-60px;margin-inline: 43px;
+                        "id="myBtn"> ..عرض المزيد</button>    </a>    
+
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="card swiper-slide">
+                    <img src="assets/img/Healthcare-Tech.jpg"> 
+                    <div style="height:216px ;"class="profile-details">
+                      <div class="name-job">
+                        <p  style="margin-top: -50px;margin-inline: 65px;">ادارة الاستشفاء </p>
+                        <h4 class="job"></h4>
+                        <a href="Hospitalization.html">  <button  style="margin-top: 14px;
+                          margin-inline: 43px;
+                      "id="myBtn"> ..عرض المزيد</button>    </a>
+
+                      </div>
+                    </div>
+                  </div> 
+                   <!-- <div class="card swiper-slide">
+                    <img src="assets/img/image.jpeg">  -->
+                    <!-- <div  style="height: 212px;"class="profile-details">
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;"> Patient management111 </p>
+                        <a href="PatientBilling.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn">Read More..</button>  </a>      
+                        <h4 class="job"></h4>
+                      </div>
+                    </div> -->
+                  <!-- </div>  -->
+                  <div class="card swiper-slide">
+                    <img style="    height: 163px;
+                  " src="assets/img/Physicians1.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top:-62px;
+                        margin-inline: 49px;
+                    "> ادارة شؤون الاطباء  </p>
+                        <a href="Medical.html">  <button  style="margin-inline:34px; margin-top:17px"id="myBtn"> ..عرض المزيد</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img style="height: 164px;" src="assets/img/solution-lab_management-hero(1)-1280x720_tcm83-17912.jpg"> 
+
+                    <div  style="height: 214px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;margin-inline: 50px;">ادارة المختبرات  </p>
+                        <a href="Laboratory.html">  <button  style="margin-inline:34px; margin-top:11px"id="myBtn"> ..عرض المزيد</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img src="assets/img/Specialty-specific.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;margin-inline: 58px;"> وحدات التخصص </p>
+                        <a href="Specialty.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn"> ..عرض المزيد</button> </a>      
+                        <h4 class="job"></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img src="assets/img/f150457bec74b8db7de4c29c49c8ccc8.jpg"> 
+                    <div  style="height: 212px;"class="profile-details">
+                      <div style="margin-top: 31px;" class="name-job">
+                        <p style="margin-top: -85px;margin-inline: 60px;"> ميزات الموقع   </p>
+                        <a href="Website.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn"> ..عرض المزيد</button>  </a>      
+                        <h4 class="job"></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img src="assets/img/blood.jpg"> 
+                    <div  style="height: 212px;"class="profile-details">
+                      <div style="margin-top: 31px;" class="name-job">
+                        <p style="margin-top: -85px;margin-inline: 60px;">   ادارة بنك الدم </p>
+                        <a href="blood.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn"> ..عرض المزيد</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img src="assets/img/fin.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;margin-inline: 52px;"> ادارة فواتير المرضى </p>
+                        <a href="Finace.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn"> ..عرض المزيد</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img  style="height: 167px;"src="assets/img/imgnew.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;margin-inline: 52px;">  ادارة المخزون </p>
+                        <a href="Innovative.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn"> ..عرض المزيد</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img  style="height: 166px;"src="assets/img/app.jpg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;margin-inline: 55px;
+                      ">  ادارة المواعيد</p>
+                        <a href="Appointment.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn"> ..عرض المزيد</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img src="assets/img/image.jpeg"> 
+
+                    <div  style="height: 212px;"class="profile-details">
+
+                      <div style="margin-top: 31px;" class="name-job">
+
+                        <p style="margin-top: -85px;margin-inline: 63px;
+                      ">ميزات اضافية  </p>
+                        <a href="Extra.html">  <button  style="margin-inline:34px; margin-top:1px "id="myBtn"> ..عرض المزيد</button>  </a>      
+                        <h4 class="job"></h4>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next swiper-navBtn"></div>
+              <div class="swiper-button-prev swiper-navBtn"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+           
+          </div>
+
+        
+      
+          </div>
+
+        
+        </div>
+
+      </div>
+    </section><!-- End Blog Details Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+<script>var swiper = new Swiper(".slide-container", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  sliderPerGroup: 4,
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1000: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+
+
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 5000,
+    },
+    // init: false,
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.next-btn',
+      prevEl: '.prev-btn',
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+  
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+  
+      // 1440:{
+      //   slidesPerView: 5,
+      //   spaceBetween: 10,
+      // },
+  
+    }
+  });</script>
+  
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    
+</script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+ <!-- ======= Footer ======= -->
+ 
+</body>
+
+</html>
